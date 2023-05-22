@@ -1,0 +1,237 @@
+"C:\Program Files\Python310\python.exe" D:/Users/cch/Desktop/tougao/ACMMM/ACMM/ACMM/train_sz_gf_ae.py
+use cuda: True
+Namespace(lr=0.001, n_clusters=6, n_z=100, dataset='REU', gamma=0.1, update_interval=1000, tol=0.0002, AR=0.95, ntrials=5, sparse=0, gsl_mode='structure_refinement', eval_freq=5, downstream_task='clustering', gpu=0, epochs=1000, w_decay=0.0, hidden_dim=512, rep_dim=64, proj_dim=64, dropout=0.0, contrast_batch_size=0, nlayers=2, maskfeat_rate_learner=0.0, maskfeat_rate_anchor=0.0, dropedge_rate=0.2, type_learner='att', k=30, sim_function='cosine', activation_learner='relu', cuda=True, method='REU', noise=0, n_input=[2000, 2000, 2000, 2000, 2000], viewNumber=5, instanceNumber=1200, batch_size=1200, save_path='./data/6V_Caltech101_20.pkl')
+Available GPU count: 1
+Current GPU device index: 0
+################ K ##############
+5
+############autoencoder############
+mseloss loss tensor(2.0942, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6364, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6049, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5954, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5926, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5917, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5912, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5911, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5905, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5881, device='cuda:0', grad_fn=<AddBackward0>)
+[2000, 2000, 2000, 2000, 2000]
+#######pretrain########
+Epoch 00100 | Rec Loss 1.1757
+Epoch 00200 | Rec Loss 1.1644
+---------edge_num-------
+tensor([10.,  9., 17.,  ..., 17., 14., 13.], device='cuda:0')
+---------edge_num-------
+tensor([10.,  9., 17.,  ..., 17., 14., 13.], device='cuda:0')
+D:\Users\cch\Desktop\tougao\ACMMM\ACMM\ACMM\train_sz_gf_ae.py:631: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  z_all = torch.tensor(z_all).cuda()
+C:\Users\cch\AppData\Roaming\Python\Python310\site-packages\torch\nn\functional.py:2886: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+Epoch 00100 | Rec Loss 1.5652|KL Loss 1.2379
+Epoch 00200 | Rec Loss 1.5292|KL Loss 1.0546
+Epoch 00300 | Rec Loss 1.5019|KL Loss 0.9897
+Epoch 00400 | Rec Loss 1.4806|KL Loss 0.9287
+Epoch 00500 | Rec Loss 1.4613|KL Loss 0.9067
+Epoch 00600 | Rec Loss 1.4600|KL Loss 0.8845
+Epoch 00700 | Rec Loss 1.4440|KL Loss 0.8573
+Epoch 00800 | Rec Loss 1.4430|KL Loss 0.8374
+Epoch 00900 | Rec Loss 1.4394|KL Loss 0.8273
+Epoch 01000 | Rec Loss 1.4282|KL Loss 0.8111
+Epoch 01000 | CL Loss 2.2393
+(1200,)
+(1200,)
+k=5
+emb deep clustering:Acc 0.1925 , nmi 0.0693 , ari 0.0046
+Final ACC:  0.3843333333333333
+Final NMI:  0.24198236901099782
+Final F-score:  0.31537458390208145
+Final ARI:  0.14602776853068553
+###################cost time################
+133.04564714431763
+################ K ##############
+10
+############autoencoder############
+mseloss loss tensor(2.0497, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6140, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5804, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5657, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5572, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5534, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5494, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5433, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5389, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5334, device='cuda:0', grad_fn=<AddBackward0>)
+[2000, 2000, 2000, 2000, 2000]
+#######pretrain########
+Epoch 00100 | Rec Loss 1.1607
+Epoch 00200 | Rec Loss 1.1455
+---------edge_num-------
+tensor([34., 15., 29.,  ..., 34., 19., 37.], device='cuda:0')
+---------edge_num-------
+tensor([34., 15., 29.,  ..., 34., 19., 37.], device='cuda:0')
+D:\Users\cch\Desktop\tougao\ACMMM\ACMM\ACMM\train_sz_gf_ae.py:631: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  z_all = torch.tensor(z_all).cuda()
+C:\Users\cch\AppData\Roaming\Python\Python310\site-packages\torch\nn\functional.py:2886: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+Epoch 00100 | Rec Loss 1.3948|KL Loss 0.8753
+Epoch 00200 | Rec Loss 1.3626|KL Loss 0.6995
+Epoch 00300 | Rec Loss 1.3525|KL Loss 0.6288
+Epoch 00400 | Rec Loss 1.3466|KL Loss 0.5916
+Epoch 00500 | Rec Loss 1.3272|KL Loss 0.5811
+Epoch 00600 | Rec Loss 1.3152|KL Loss 0.5699
+Epoch 00700 | Rec Loss 1.3115|KL Loss 0.5519
+Epoch 00800 | Rec Loss 1.3088|KL Loss 0.5520
+Epoch 00900 | Rec Loss 1.2996|KL Loss 0.5383
+Epoch 01000 | Rec Loss 1.3182|KL Loss 0.5316
+Epoch 01000 | CL Loss 1.8498
+(1200,)
+(1200,)
+k=10
+emb deep clustering:Acc 0.2133 , nmi 0.1220 , ari 0.0154
+Final ACC:  0.26666666666666666
+Final NMI:  0.10969909256237725
+Final F-score:  0.18818284060524618
+Final ARI:  0.038030219364767616
+###################cost time################
+327.84247851371765
+################ K ##############
+20
+############autoencoder############
+mseloss loss tensor(2.0497, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6140, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5804, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5657, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5572, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5534, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5494, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5433, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5389, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5334, device='cuda:0', grad_fn=<AddBackward0>)
+[2000, 2000, 2000, 2000, 2000]
+#######pretrain########
+Epoch 00100 | Rec Loss 1.1769
+Epoch 00200 | Rec Loss 1.1460
+---------edge_num-------
+tensor([60., 29., 54.,  ..., 56., 46., 60.], device='cuda:0')
+---------edge_num-------
+tensor([60., 29., 54.,  ..., 56., 46., 60.], device='cuda:0')
+D:\Users\cch\Desktop\tougao\ACMMM\ACMM\ACMM\train_sz_gf_ae.py:631: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  z_all = torch.tensor(z_all).cuda()
+C:\Users\cch\AppData\Roaming\Python\Python310\site-packages\torch\nn\functional.py:2886: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+Epoch 00100 | Rec Loss 1.1083|KL Loss 0.3305
+Epoch 00200 | Rec Loss 1.0980|KL Loss 0.2974
+Epoch 00300 | Rec Loss 1.0781|KL Loss 0.2781
+Epoch 00400 | Rec Loss 1.0652|KL Loss 0.2720
+Epoch 00500 | Rec Loss 1.0575|KL Loss 0.2628
+Epoch 00600 | Rec Loss 1.0496|KL Loss 0.2613
+Epoch 00700 | Rec Loss 1.0427|KL Loss 0.2569
+Epoch 00800 | Rec Loss 1.0439|KL Loss 0.2534
+Epoch 00900 | Rec Loss 1.0283|KL Loss 0.2487
+Epoch 01000 | Rec Loss 1.0226|KL Loss 0.2479
+Epoch 01000 | CL Loss 1.2705
+(1200,)
+(1200,)
+k=20
+emb deep clustering:Acc 0.2242 , nmi 0.1414 , ari 0.0162
+Final ACC:  0.25083333333333335
+Final NMI:  0.16728092382038243
+Final F-score:  0.1912847952689335
+Final ARI:  0.021534193394892945
+###################cost time################
+518.1803569793701
+################ K ##############
+40
+############autoencoder############
+mseloss loss tensor(2.0497, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6140, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5804, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5657, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5572, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5534, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5494, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5433, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5389, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5334, device='cuda:0', grad_fn=<AddBackward0>)
+[2000, 2000, 2000, 2000, 2000]
+#######pretrain########
+Epoch 00100 | Rec Loss 1.2460
+Epoch 00200 | Rec Loss 1.2459
+---------edge_num-------
+tensor([120.,  52.,  94.,  ..., 111.,  90., 116.], device='cuda:0')
+---------edge_num-------
+tensor([120.,  52.,  94.,  ..., 111.,  90., 116.], device='cuda:0')
+D:\Users\cch\Desktop\tougao\ACMMM\ACMM\ACMM\train_sz_gf_ae.py:631: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  z_all = torch.tensor(z_all).cuda()
+C:\Users\cch\AppData\Roaming\Python\Python310\site-packages\torch\nn\functional.py:2886: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+Epoch 00100 | Rec Loss 1.8695|KL Loss 1.7640
+Epoch 00200 | Rec Loss 1.8414|KL Loss 1.4306
+Epoch 00300 | Rec Loss 1.8264|KL Loss 1.2975
+Epoch 00400 | Rec Loss 1.8065|KL Loss 1.2269
+Epoch 00500 | Rec Loss 1.8005|KL Loss 1.1718
+Epoch 00600 | Rec Loss 1.7905|KL Loss 1.1295
+Epoch 00700 | Rec Loss 1.7778|KL Loss 1.1114
+Epoch 00800 | Rec Loss 1.7733|KL Loss 1.0843
+Epoch 00900 | Rec Loss 1.7608|KL Loss 1.0684
+Epoch 01000 | Rec Loss 1.7588|KL Loss 1.0534
+Epoch 01000 | CL Loss 2.8122
+(1200,)
+(1200,)
+k=40
+emb deep clustering:Acc 0.2300 , nmi 0.0914 , ari 0.0091
+Final ACC:  0.4425
+Final NMI:  0.3136015166435354
+Final F-score:  0.4081886539319619
+Final ARI:  0.17234589435987224
+###################cost time################
+713.5915961265564
+################ K ##############
+50
+############autoencoder############
+mseloss loss tensor(2.0497, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.6140, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5804, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5657, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5572, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5534, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5494, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5433, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5389, device='cuda:0', grad_fn=<AddBackward0>)
+mseloss loss tensor(1.5334, device='cuda:0', grad_fn=<AddBackward0>)
+[2000, 2000, 2000, 2000, 2000]
+#######pretrain########
+Epoch 00100 | Rec Loss 1.2460
+Epoch 00200 | Rec Loss 1.2459
+---------edge_num-------
+tensor([131.,  58., 113.,  ..., 131., 121., 131.], device='cuda:0')
+---------edge_num-------
+tensor([131.,  58., 113.,  ..., 131., 121., 131.], device='cuda:0')
+D:\Users\cch\Desktop\tougao\ACMMM\ACMM\ACMM\train_sz_gf_ae.py:631: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  z_all = torch.tensor(z_all).cuda()
+C:\Users\cch\AppData\Roaming\Python\Python310\site-packages\torch\nn\functional.py:2886: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+Epoch 00100 | Rec Loss 1.2624|KL Loss 0.2753
+Epoch 00200 | Rec Loss 1.2659|KL Loss 0.2521
+Epoch 00300 | Rec Loss 1.2642|KL Loss 0.2488
+Epoch 00400 | Rec Loss 1.2564|KL Loss 0.2471
+Epoch 00500 | Rec Loss 1.2540|KL Loss 0.2453
+Epoch 00600 | Rec Loss 1.2508|KL Loss 0.2421
+Epoch 00700 | Rec Loss 1.2445|KL Loss 0.2443
+Epoch 00800 | Rec Loss 1.2349|KL Loss 0.2475
+Epoch 00900 | Rec Loss 1.2360|KL Loss 0.2452
+Epoch 01000 | Rec Loss 1.2345|KL Loss 0.2462
+Epoch 01000 | CL Loss 1.4807
+(1200,)
+(1200,)
+k=50
+emb deep clustering:Acc 0.2092 , nmi 0.0840 , ari 0.0077
+Final ACC:  0.25083333333333335
+Final NMI:  0.16645259666668688
+Final F-score:  0.19224719646487207
+Final ARI:  0.02373280380257032
+###################cost time################
+907.2516977787018
+
+进程已结束,退出代码0
